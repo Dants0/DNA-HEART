@@ -43,7 +43,7 @@ var init = function () {
     window.addEventListener('resize', function () {
         width = canvas.width = koef * innerWidth;
         height = canvas.height = koef * innerHeight;
-        ctx.fillStyle = "rgba(0,0,0,1)";
+        ctx.fillStyle = "rgb(0, 0, 0)";
         ctx.fillRect(0, 0, width, height);
     });
 
@@ -133,8 +133,8 @@ var init = function () {
                 ctx.fillRect(u.trace[k].x, u.trace[k].y, 1, 1);
             }
         }
-        //ctx.fillStyle = "rgba(255,255,255,1)";
-        //for (i = u.trace.length; i--;) ctx.fillRect(targetPoints[i][0], targetPoints[i][1], 2, 2);
+        ctx.fillStyle = "rgba(255,255,255,1)";
+        // for (i = u.trace.length; i--;) ctx.fillRect(targetPoints[i][0], targetPoints[i][1], 2, 2);
 
         window.requestAnimationFrame(loop, canvas);
     };
